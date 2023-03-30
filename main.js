@@ -17,6 +17,11 @@ emptyLikes.forEach((emptyLike) => {
       })
       .catch(() => {
         errorModal.classList.remove('hidden');
+        const modalErrorMessage = document.getElementById("modal-message");
+        modalErrorMessage.innerText = error;
+        setTimeout(() => {
+          errorModal.classList.add('hidden');
+        }, 3000)
       })
   })
 })
